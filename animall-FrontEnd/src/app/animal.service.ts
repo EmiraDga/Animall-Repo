@@ -21,4 +21,20 @@ export class AnimalService {
     return this.httpClient.post<Animal>(`${this.baseURL}` + '/add', animal)
       ;
   }
+
+
+  updateAnimal(id: number, animal: Animal): Observable<Animal> {
+    return this.httpClient.put<Animal>(`${this.baseURL}/update/${id}`, animal)
+  }
+ 
+  getAnimalById(id: number): Observable<Animal> {
+    return this.httpClient.get<Animal>(`${this.baseURL}/${id}`);
+  }
+
+  deleteAnimal(id : number) : Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL}/delete/${id}`);
+
+  }
+
+
 }

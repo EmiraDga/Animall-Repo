@@ -13,7 +13,10 @@
 								<th><span>Last name</span></th>
 								<th class="text-center"><span> Email</span></th>
 								<th><span>Phone number</span></th>
-								<th>&nbsp;</th>
+								<th><span>City</span></th>
+								<th><span>Adresse</span></th>
+
+								<th>&nbsp; ACTION</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -34,6 +37,9 @@
 								</td>
 							
 							<td>{{u.phone}} </td>
+							<td>{{u.city}} </td>
+							<td>{{u.addresse}} </td>
+
 								<td style="width: 20%;">
 									<button  class="btn btn-info" (click)="updateUser(u.id)">  EDIT </button>
 									<button class="btn btn-danger" (click)="deleteUser(u.id)"> DELETE </button>

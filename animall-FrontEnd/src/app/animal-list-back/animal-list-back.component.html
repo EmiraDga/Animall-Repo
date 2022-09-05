@@ -1,4 +1,4 @@
-<h2> User's List </h2>
+<h2> Animals' List </h2>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
 	<div class="row">
@@ -18,9 +18,9 @@
 						<tbody>
 							<tr *ngFor="let a of animal ">
 								<td>
-									<img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
+									<img src="https://www.cartoonizemypet.com/store/wp-admin/admin-ajax.php?action=cmp_preview&pet_id=710734" width="100px" alt="">
 									<a href="#" class="user-link">{{a.name}}</a>
-									<span class="user-subhead">Member</span>
+									
 								</td>
 								<td>
 									{{a.age}}
@@ -31,8 +31,8 @@
 							
 							
 								<td style="width: 20%;">
-									<button  class="btn btn-info" >  EDIT </button>
-									<button class="btn btn-danger"w> DELETE </button>
+									<button  class="btn btn-info" (click)="updateAnimal(a.id)">  EDIT </button>
+									<button class="btn btn-danger" (click)="deleteAimal(a.id)"> DELETE </button>
 								</td>
 							</tr>
 						</tbody>

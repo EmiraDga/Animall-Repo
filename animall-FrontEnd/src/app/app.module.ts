@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component'; 
 import { FooterComponent } from './footer/footer.component';
 import { FullComponent } from './full/full.component';
+import { UpdateAnimalComponent } from './update-animal/update-animal.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FullComponent } from './full/full.component';
     HeaderComponent,
     HomeComponent,
     FullComponent,
+    UpdateAnimalComponent,
     
     ],
   imports: [
