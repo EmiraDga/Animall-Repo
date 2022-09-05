@@ -15,12 +15,16 @@ public class UserDto {
 
 	private String username;
 
+	private String city;
+
+	private String addresse;
+
 	public UserDto() {
 		super();
 	}
 
 	public UserDto(Long id, String email, String lastname, String firstname, String phone, String password,
-			String username) {
+			String username, String city, String addresse) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -29,6 +33,8 @@ public class UserDto {
 		this.phone = phone;
 		this.password = password;
 		this.username = username;
+		this.city = city;
+		this.addresse = addresse;
 	}
 
 	public String getEmail() {
@@ -86,4 +92,21 @@ public class UserDto {
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
 	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getAddresse() {
+		return addresse;
+	}
+
+	public void setAddresse(String addresse) {
+		this.addresse = addresse;
+	}
+
 }

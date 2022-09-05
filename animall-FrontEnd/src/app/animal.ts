@@ -2,7 +2,7 @@ export class Animal {
 
     public id!: number;
     public name?: String;
-    public age!: number;
+    public age?: number;
     public color?: String;
     public gender?: String;
     public breed?: String;

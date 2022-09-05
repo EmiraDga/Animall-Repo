@@ -53,6 +53,9 @@ public class UserService {
 		Saveduser.setPassword(userToUpdate.getPassword());
 		Saveduser.setPhone(userToUpdate.getPhone());
 
+		Saveduser.setCity(userToUpdate.getCity());
+		Saveduser.setAddresse(userToUpdate.getAddresse());
+
 		return converter.convertToSaveDto(userRepo.save(Saveduser));
 	}
 

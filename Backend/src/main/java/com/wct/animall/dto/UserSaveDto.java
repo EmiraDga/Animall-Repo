@@ -14,8 +14,12 @@ public class UserSaveDto {
 
 	private String username;
 
-	public UserSaveDto(String email, String lastname, String firstname, String phone, String password,
-			String username) {
+	private String city;
+
+	private String addresse;
+
+	public UserSaveDto(String email, String lastname, String firstname, String phone, String password, String username,
+			String city, String addresse) {
 		super();
 		this.email = email;
 		this.lastname = lastname;
@@ -23,6 +27,8 @@ public class UserSaveDto {
 		this.phone = phone;
 		this.password = password;
 		this.username = username;
+		this.city = city;
+		this.addresse = addresse;
 	}
 
 	public UserSaveDto() {
@@ -75,6 +81,22 @@ public class UserSaveDto {
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getAddresse() {
+		return addresse;
+	}
+
+	public void setAddresse(String addresse) {
+		this.addresse = addresse;
 	}
 
 }

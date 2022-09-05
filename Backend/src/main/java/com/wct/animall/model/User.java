@@ -43,6 +43,10 @@ public class User {
 
 	private boolean isEnabled;
 
+	private String city;
+
+	private String addresse;
+
 	@NotBlank
 	@Size(max = 20)
 	private Authority authority;
@@ -95,7 +99,7 @@ public class User {
 
 	public User(String username, String email, String password, String mobile, String phone, String lastname,
 			String firstname, boolean isAccountNonExpired, boolean isAccountNonLocked, boolean active,
-			boolean isEnabled, Authority authority) {
+			boolean isEnabled, Authority authority, String city, String addresse) {
 		this.username = username;
 		this.email = email;
 		this.password = password;
@@ -107,6 +111,8 @@ public class User {
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.authority = authority;
+		this.city = city;
+		this.addresse = addresse;
 	}
 
 	public List<Announcement> getAnnoucements() {
@@ -187,6 +193,22 @@ public class User {
 
 	public void setEnabled(boolean isEnabled) {
 		this.isEnabled = isEnabled;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getAddresse() {
+		return addresse;
+	}
+
+	public void setAddresse(String addresse) {
+		this.addresse = addresse;
 	}
 
 }
