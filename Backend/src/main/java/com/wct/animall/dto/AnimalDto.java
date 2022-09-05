@@ -2,7 +2,7 @@ package com.wct.animall.dto;
 
 public class AnimalDto {
 
-	private int id;
+	private Integer id;
 	private String name;
 	private int age;
 	private String color;

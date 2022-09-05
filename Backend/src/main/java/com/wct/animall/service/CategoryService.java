@@ -11,7 +11,6 @@ import com.wct.animall.converter.CategoryConverter;
 import com.wct.animall.dto.CategoryDto;
 import com.wct.animall.dto.CategorySaveDto;
 import com.wct.animall.dto.CategoryUpdateDto;
-import com.wct.animall.model.Animal;
 import com.wct.animall.model.Category;
 import com.wct.animall.repository.AnimalRepository;
 import com.wct.animall.repository.CategoryRepository;
@@ -53,10 +52,6 @@ public class CategoryService {
 	public CategorySaveDto saveCategoryDto(CategorySaveDto dto) throws Exception {
 
 		Category category = modelMapper.map(dto, Category.class);
-
-		Animal animal = (Animal) animalRepo.findAllById(dto.getAnimalId());
-		category.setAnimals((List<Animal>) animal);
-
 		return converter.convertToDtoSave(CatRepo.save(category));
 
 	}

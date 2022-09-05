@@ -53,7 +53,7 @@ public class AnimalService {
 	public AnimalSaveDto saveAnimalDto(AnimalSaveDto dto) throws Exception {
 		Animal animal = modelMapper.map(dto, Animal.class);
 		Category category = categRepo.findById(dto.getCategoryId())
-				.orElseThrow(() -> new Exception("animal Not found"));
+				.orElseThrow(() -> new Exception("categorie Not found"));
 		animal.setCategory(category);
 		return converter.convertToSaveDto(animalRepo.save(animal));
 

@@ -4,16 +4,13 @@ public class CategorySaveDto {
 
 	private String nameCategory;
 
-	private int AnimalId;
-
 	public String getNameCategory() {
 		return nameCategory;
 	}
 
-	public CategorySaveDto(String nameCategory, int AnimalId) {
+	public CategorySaveDto(String nameCategory) {
 		super();
 		this.nameCategory = nameCategory;
-		this.AnimalId = AnimalId;
 	}
 
 	public CategorySaveDto() {
@@ -22,14 +19,6 @@ public class CategorySaveDto {
 
 	public void setNameCategory(String nameCategory) {
 		this.nameCategory = nameCategory;
-	}
-
-	public int getAnimalId() {
-		return AnimalId;
-	}
-
-	public void setAnimalId(int animalId) {
-		AnimalId = animalId;
 	}
 
 }

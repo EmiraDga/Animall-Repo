@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -35,11 +36,15 @@ public class Announcement {
 	@JoinColumn(name = "User_id", referencedColumnName = "id")
 	private User user;
 
+	@OneToOne
+	@JoinColumn(name = "animal_id")
+	private Animal animal;
+
 	public Announcement() {
 	}
 
 	public Announcement(Long id, StateType state, int nb_announncment, String location, String dateCreated,
-			String description, User user) {
+			String description, User user, Animal animal) {
 		super();
 		this.id = id;
 		this.state = state;
@@ -48,6 +53,7 @@ public class Announcement {
 		this.dateCreated = dateCreated;
 		this.description = description;
 		this.user = user;
+		this.animal = animal;
 	}
 
 	public StateType getState() {
@@ -104,6 +110,14 @@ public class Announcement {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Animal getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(Animal animal) {
+		this.animal = animal;
 	}
 
 }
