@@ -25,9 +25,16 @@ export class AnimalListBackComponent implements OnInit {
   }
 
   updateAnimal(id : number) : void{
-    this.router.navigate(["update-user" , id])
+    this.router.navigate(["update-animal" , id])
     
       }
+
+      deleteAimal(id : number){
+        this.animalService.deleteAnimal(id).subscribe(data => {
+          console.log(data);
+          this.GetAnimals();
+        })
+          }
     
 
 }
