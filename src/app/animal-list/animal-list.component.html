@@ -1,0 +1,26 @@
+<div class="container-fluid bg-light pt-5">
+    <div class="container py-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h4 class="text-secondary mb-3">Our Services</h4>
+            <h1 class="display-4 m-0"><span class="text-primary">Premium</span> Pet Services</h1>
+        </div>
+        <div class="row pb-3">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
+                    <h3 class="flaticon-house display-3 font-weight-normal text-secondary mb-3"></h3>
+                    <h3 class="mb-3">Pet 1</h3>
+                    <p> Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                    <a class="text-uppercase font-weight-bold" href="">Read More</a>
+                </div>
+            </div> 
+            <div class="col-md-6 col-lg-4 mb-4" *ngFor="let a of animals" >
+                <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
+                    <h3 class="flaticon-house display-3 font-weight-normal text-secondary mb-3"></h3>
+                    <h3 class="mb-3">{{a.name}}</h3>
+                    <p> {{a.age}} </p>
+                    <a class="text-uppercase font-weight-bold" href="">{{a.color}}</a>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>

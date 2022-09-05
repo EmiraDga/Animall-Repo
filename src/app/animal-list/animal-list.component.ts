@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Animal } from '../animal';
+import { AnimalService } from '../animal.service';
 
 @Component({
   selector: 'app-animal-list',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./animal-list.component.css']
 })
 export class AnimalListComponent implements OnInit {
+  animals!: Animal[];
 
-  constructor() { }
+  constructor(private animalService: AnimalService, private router: Router ) { }
 
   ngOnInit(): void {
+    this.GetAnimals();
   }
+
+  public GetAnimals(){
+    this.animalService.getAll().subscribe(data => {
+    this.animals = data;
+    });
+  }
+
 
 }

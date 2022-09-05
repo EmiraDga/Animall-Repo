@@ -18,7 +18,7 @@ export class AnimalListBackComponent implements OnInit {
   }
 
 
-  private GetAnimals(){
+  public GetAnimals(){
     this.animalService.getAll().subscribe(data => {
     this.animal = data;
     });
