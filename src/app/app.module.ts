@@ -15,6 +15,10 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { FullComponent } from './full/full.component';
 import { UpdateAnimalComponent } from './update-animal/update-animal.component';
+import { AnnouncementComponent } from './announcement/announcement.component';
+import { AddAnnouncementComponent } from './add-announcement/add-announcement.component';
+import { CategoryComponent } from './category/category.component';
+import { AnnouncementDetailComponent } from './announcement-detail/announcement-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { UpdateAnimalComponent } from './update-animal/update-animal.component';
     HomeComponent,
     FullComponent,
     UpdateAnimalComponent,
+    AnnouncementComponent,
+    AddAnnouncementComponent,
+    CategoryComponent,
+    AnnouncementDetailComponent,
     
     ],
   imports: [

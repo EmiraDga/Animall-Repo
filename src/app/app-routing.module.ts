@@ -7,10 +7,16 @@ import { AnimalCreateComponent } from './animal-create/animal-create.component'
 import { AnimalListBackComponent } from './animal-list-back/animal-list-back.component';
 import { FullComponent } from './full/full.component';
 import { UpdateAnimalComponent } from './update-animal/update-animal.component';
-
+import{AnnouncementComponent} from './announcement/announcement.component';
+import { AnnouncementDetailComponent } from './announcement-detail/announcement-detail.component';
 const routes: Routes = [
-  {path: '' , component:FullComponent},
+  {path: '' , component:FullComponent
+    
+},
   {path: 'animals' , component:AnimalListBackComponent },
+  {path: 'announcement' , component:AnnouncementComponent },
+  {path: 'announcement-detail' , component:AnnouncementDetailComponent},
+
    {path: 'users' , component:UserListComponent },
    {path: 'create-user' , component:CreateUserComponent },
    {path: 'update-user/:id' , component:UpdateUserComponent },
