@@ -52,6 +52,7 @@ public class AnimalService {
 	// UN PROBLEME AU NIVEAU ANIMAL ET CATEGORY
 	public AnimalSaveDto saveAnimalDto(AnimalSaveDto dto) throws Exception {
 		Animal animal = modelMapper.map(dto, Animal.class);
+		animal.setId(null);
 		Category category = categRepo.findById(dto.getCategoryId())
 				.orElseThrow(() -> new Exception("animal Not found"));
 		animal.setCategory(category);

@@ -10,6 +10,8 @@ public class AnnouncementUpdateDto {
 
 	private Long userId;
 
+	private Integer AnimalId;
+
 	private String location;
 
 	@JsonFormat(pattern = "yyyy-MM-dd", shape = Shape.STRING)
@@ -21,14 +23,15 @@ public class AnnouncementUpdateDto {
 		super();
 	}
 
-	public AnnouncementUpdateDto(StateType state, Long userId, String location, String dateCreated,
-			String description) {
+	public AnnouncementUpdateDto(StateType state, Long userId, String location, String dateCreated, String description,
+			Integer AnimalId) {
 		super();
 		this.state = state;
 		this.userId = userId;
 		this.location = location;
 		this.dateCreated = dateCreated;
 		this.description = description;
+		this.AnimalId = AnimalId;
 	}
 
 	public String getLocation() {
@@ -70,4 +73,13 @@ public class AnnouncementUpdateDto {
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
+
+	public Integer getAnimalId() {
+		return AnimalId;
+	}
+
+	public void setAnimalId(Integer animalId) {
+		AnimalId = animalId;
+	}
+
 }

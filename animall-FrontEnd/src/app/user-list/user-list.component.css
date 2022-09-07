@@ -3,7 +3,8 @@
 
 body{margin-top:20px;
 
-        font-family: 'Quicksand';font-size: 22px;
+	font-family: Quicksand, sans-serif;
+	font-weight: bold;
     }
 
 
@@ -14,6 +15,7 @@ body{margin-top:20px;
 	max-width: 50px;
 	float: left;
 	margin-right: 15px;
+	
 }
 .user-list tbody td .user-link {
 	display: block;
@@ -37,6 +39,9 @@ body{margin-top:20px;
 .table thead > tr > th {
 	border-bottom: 1px solid #C2C2C2;
 	padding-bottom: 0;
+
+	font-family: Quicksand, sans-serif;
+	font-weight: bold;
 }
 .table tbody > tr > td {
 	font-size: 0.875em;
@@ -44,17 +49,23 @@ body{margin-top:20px;
 	border-top: 10px solid #fff;
 	vertical-align: middle;
 	padding: 12px 8px;
+
+	font-family: Quicksand, sans-serif;
+	font-weight: bold;
 }
 .table tbody > tr > td:first-child,
 .table thead > tr > th:first-child {
 	padding-left: 20px;
+	
 }
 .table thead > tr > th span {
 	border-bottom: 2px solid #C2C2C2;
 	display: inline-block;
 	padding: 0 5px;
 	padding-bottom: 5px;
-	font-weight: normal;
+
+	font-family: Quicksand, sans-serif;
+	font-weight: bold;
 }
 .table thead > tr > th > a span {
 	color: #344644;

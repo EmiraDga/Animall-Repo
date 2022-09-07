@@ -8,5 +8,7 @@ export class UserDto {
     phone?: String;
     password?:String;
     username?:String;
+    addresse?:String;
+    city?:String;
 
 }
