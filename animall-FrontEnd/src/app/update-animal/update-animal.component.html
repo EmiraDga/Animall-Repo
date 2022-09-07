@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  <meta charset="UTF-8">
+  <title>CodePen - Flat Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="wrap">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-header">
+        <h2>Please fill in this form to <u style="color: red">update</u> the pet information</h2>
+      </div>
+      <div class="form-body">
+        <fieldset>
+
+          <legend><i class="fa fa-paw" aria-hidden="true"></i> Pet Information</legend>
+          <label for="fname">Pet Name</label>
+          <input type="text" id="fname" name="fname"  *ngIf="animal" [(ngModel)]="animal.name">
+
+          <label for="lname">Pet Age </label>
+          <input type="text" id="fname" name="fname" *ngIf="animal" [(ngModel)]="animal.age">
+
+          <label for="lname"> Color </label>
+          <input type="text" id="lname" name="lname" *ngIf="animal" [(ngModel)]="animal.color">
+
+          <!-- <label for="address">Location</label>
+          <input type="text" id="address" name="address" required=""  >
+
+          <label for="state">Categroy</label>
+          <select id="state" name="state" required="">
+            <option value=""></option>
+            <option value="AL">Chat</option>
+            <option value="AK">Chien</option>
+          </select>
+
+          <label for="state">Breed</label>
+          <select id="state" name="state" required=""  [(ngModel)]="animal.breed ">
+            <option value=""></option>
+            <option value="AL">Chat</option>
+            <option value="AK">Chien</option>
+          </select>
+
+          <label for="address"> Phone </label>
+          <input type="text" id="address" name="address" required="">
+
+          <label for="avatar">Select image</label>
+          <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+
+          <div class="d-sm-flex align-items-sm-center justify-content-sm-between pt-1">
+            <div class="form-group">
+              <div>
+                <label class="text-muted mandatory">Vaccinated</label>
+              </div>
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary form-check-label active">
+                  <input class="form-check-input" type="radio" checked> Yes
+                </label>
+
+                <label class="btn btn-primary form-check-label">
+                  <input class="form-check-input" type="radio"> No
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <div class="d-sm-flex align-items-sm-center justify-content-sm-between pt-1">
+              <div class="form-group">
+                <div>
+                  <label class="text-muted mandatory">Trained</label>
+                </div>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-primary form-check-label active">
+                    <input class="form-check-input" type="radio" checked> Yes
+                  </label>
+
+                  <label class="btn btn-primary form-check-label">
+                    <input class="form-check-input" type="radio"> No
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </fieldset>
+      </div>
+      <div class="form-footer">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+  <!-- partial -->
+
+
+  <script type="text/javascript"></script>
+</body>
+
+</html>

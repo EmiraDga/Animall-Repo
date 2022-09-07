@@ -15,7 +15,9 @@ public class BeanFactory {
 
 	@Bean
 	public ModelMapper modelMapper() {
-		return new ModelMapper();
+		ModelMapper modelMapper = new ModelMapper();
+		modelMapper.getConfiguration().setAmbiguityIgnored(true);
+		return modelMapper;
 	}
 
 	@Bean

@@ -16,7 +16,6 @@ export class CreateUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //alech les fonctions hedhom mahomch fel ngOnInit
   onSubmit() {
     console.log(this.user);
     this.saveUser();

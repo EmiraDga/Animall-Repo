@@ -7,7 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Table(name = "Animal")
@@ -17,10 +16,6 @@ public class Animal {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-
-	@OneToOne
-	@JoinColumn(name = "announcement_id")
-	private Announcement announce;
 
 	private String color, gender, Breed, name;
 	private String image;
@@ -175,14 +170,6 @@ public class Animal {
 
 	public void setCategory(Category category) {
 		this.category = category;
-	}
-
-	public Announcement getAnnounce() {
-		return announce;
-	}
-
-	public void setAnnounce(Announcement announce) {
-		this.announce = announce;
 	}
 
 }
