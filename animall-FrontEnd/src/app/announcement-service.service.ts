@@ -23,6 +23,13 @@ export class AnnouncementServiceService {
       ;
   }
 
+//ADDED
+createAnimalAnnouncement(announcement: Announcement): Observable<Announcement> {
+  console.log("announcement and animal in service", announcement)
+  return this.httpClient.post<Announcement>(`${this.baseURL}` + '/addAnimalAnnoucement', announcement)
+    ;
+}
+
   updateAnnouncement(id: number, announcement: Announcement): Observable<Announcement> {
     return this.httpClient.put<Announcement>(`${this.baseURL}/update/${id}`, announcement)
   }

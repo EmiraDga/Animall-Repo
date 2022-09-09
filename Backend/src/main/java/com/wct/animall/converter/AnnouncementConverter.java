@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.wct.animall.dto.AnnouncementAnimalSaveDto;
 import com.wct.animall.dto.AnnouncementDto;
 import com.wct.animall.dto.AnnouncementSaveDto;
 import com.wct.animall.dto.AnnouncementUpdateDto;
@@ -54,6 +55,19 @@ public class AnnouncementConverter {
 	public AnnouncementSaveDto convertToSaveDto(Announcement announcement) {
 
 		AnnouncementSaveDto dto = modelMapper.map(announcement, AnnouncementSaveDto.class);
+		return dto;
+	}
+
+	// NEW ADDED
+	// save AnnouncementAnimal
+	public Announcement convertToSaveEntity(AnnouncementAnimalSaveDto dto) {
+		Announcement announcement = modelMapper.map(dto, Announcement.class);
+		return announcement;
+	}
+
+	public AnnouncementAnimalSaveDto convertToSaveAnimalAnnouncementDto(Announcement announcement) {
+
+		AnnouncementAnimalSaveDto dto = modelMapper.map(announcement, AnnouncementAnimalSaveDto.class);
 		return dto;
 	}
 

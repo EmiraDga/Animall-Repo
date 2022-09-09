@@ -15,6 +15,11 @@ export class UpdateAnimalComponent implements OnInit {
   constructor(private animalService: AnimalService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+    this.id=this.route.snapshot.params['id'];
+    
+    this.animalService.getAnimalById(this.id).subscribe(data => {
+      this.animal = data;
+    },error => console.log(error) );
   }
 
   onSubmit(){

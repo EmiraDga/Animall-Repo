@@ -1,5 +1,7 @@
 package com.wct.animall.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -29,7 +31,7 @@ public class Announcement {
 	private String location;
 
 	@JsonFormat(pattern = "yyyy-MM-dd", shape = Shape.STRING)
-	private String dateCreated;
+	private LocalDateTime dateCreated;
 
 	@Column(length = 512)
 	private String description;
@@ -45,7 +47,7 @@ public class Announcement {
 	public Announcement() {
 	}
 
-	public Announcement(Long id, StateType state, int nb_announncment, String location, String dateCreated,
+	public Announcement(Long id, StateType state, int nb_announncment, String location, LocalDateTime dateCreated,
 			String description, User user, Animal animal) {
 		super();
 		this.id = id;
@@ -90,11 +92,11 @@ public class Announcement {
 		this.id = id;
 	}
 
-	public String getDateCreated() {
+	public LocalDateTime getDateCreated() {
 		return dateCreated;
 	}
 
-	public void setDateCreated(String dateCreated) {
+	public void setDateCreated(LocalDateTime dateCreated) {
 		this.dateCreated = dateCreated;
 	}
 

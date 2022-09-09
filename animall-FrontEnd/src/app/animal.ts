@@ -9,5 +9,8 @@ export class Animal {
     public image?: String;
     public vaccinated?: boolean;
     public trained?: boolean;
+    public categoryId? :number;
+  saveAnimal: any;
+
 
 }

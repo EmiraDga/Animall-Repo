@@ -10,7 +10,7 @@ public class AnnouncementUpdateDto {
 
 	private Long userId;
 
-	private Integer AnimalId;
+	private Integer animalId;
 
 	private String location;
 
@@ -24,14 +24,14 @@ public class AnnouncementUpdateDto {
 	}
 
 	public AnnouncementUpdateDto(StateType state, Long userId, String location, String dateCreated, String description,
-			Integer AnimalId) {
+			Integer animalId) {
 		super();
 		this.state = state;
 		this.userId = userId;
 		this.location = location;
 		this.dateCreated = dateCreated;
 		this.description = description;
-		this.AnimalId = AnimalId;
+		this.animalId = animalId;
 	}
 
 	public String getLocation() {
@@ -75,11 +75,11 @@ public class AnnouncementUpdateDto {
 	}
 
 	public Integer getAnimalId() {
-		return AnimalId;
+		return animalId;
 	}
 
 	public void setAnimalId(Integer animalId) {
-		AnimalId = animalId;
+		animalId = animalId;
 	}
 
 }

@@ -10,6 +10,7 @@ import { UpdateAnimalComponent } from './update-animal/update-animal.component';
 import{AnnouncementComponent} from './announcement/announcement.component';
 import { AnnouncementDetailComponent } from './announcement-detail/announcement-detail.component';
 import { AddAnnouncementComponent } from './add-announcement/add-announcement.component';
+import { DonationComponent } from './donation/donation.component';
 const routes: Routes = [
   {path: '' , component:FullComponent},
   {path: 'animals' , component:AnimalListBackComponent },
@@ -22,6 +23,8 @@ const routes: Routes = [
    {path: 'delete-user/:id' , component:UpdateUserComponent },
    {path: 'add-announcement' , component:AddAnnouncementComponent },
    {path: 'create-animal' , component:AnimalCreateComponent},
+   {path: 'donation' , component: DonationComponent},
+
    {path: '', redirectTo:'users' , pathMatch: 'full'}
 
 ];

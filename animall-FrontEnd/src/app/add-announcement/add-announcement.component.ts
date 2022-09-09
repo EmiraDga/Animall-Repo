@@ -3,7 +3,14 @@ import { Router } from '@angular/router';
 import { Animal } from '../animal';
 import { Announcement } from '../announcement';
 import { AnnouncementServiceService } from '../announcement-service.service';
-
+import { UserDto } from '../user';
+import {MatSelectModule} from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+import { AnimalService } from '../animal.service';
+import { data } from 'autoprefixer';
+import { Category } from '../category';
+import { CategoryServiceService } from '../category-service.service';
 @Component({
   selector: 'app-add-announcement',
   templateUrl: './add-announcement.component.html',
@@ -11,11 +18,16 @@ import { AnnouncementServiceService } from '../announcement-service.service';
 })
 export class AddAnnouncementComponent implements OnInit {
   announcement: Announcement = new Announcement();
-  animal: Animal = new Animal();
+  anim: Animal = new Animal();
+  animal!: Animal[];
+  categories!: Category[];
 
-  constructor(private announcementService: AnnouncementServiceService, private router: Router) { }
+
+user: UserDto=new UserDto();
+  constructor(private announcementService: AnnouncementServiceService, private router: Router, public animalService : AnimalService, public categoryService :CategoryServiceService) { }
 
   ngOnInit(): void {
+this.GetCategories();
   }
 
   onSubmit() {
@@ -24,15 +36,22 @@ export class AddAnnouncementComponent implements OnInit {
   }
 
   SaveAnnouncement() {
-    this.announcementService.createAnnouncement(this.announcement).subscribe(data => {
+    this.announcementService.createAnimalAnnouncement(this.announcement).subscribe(data => {
       console.log(this.announcement);
-      this.goToUserList();
     },
       error => console.log(error));
   }
 
+  public GetCategories(){
+    this.categoryService.getAll().subscribe(data => {
+    this.categories = data;
+    });
+  }
+
+
   goToUserList() {
-    this.router.navigate(['/users']);
+    this.router.navigate(['/announcement']);
+
   }
 
 

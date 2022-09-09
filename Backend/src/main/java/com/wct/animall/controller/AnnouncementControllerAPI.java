@@ -3,23 +3,23 @@ package com.wct.animall.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wct.animall.converter.AnnouncementConverter;
+import com.wct.animall.dto.AnnouncementAnimalSaveDto;
 import com.wct.animall.dto.AnnouncementDto;
 import com.wct.animall.dto.AnnouncementSaveDto;
 import com.wct.animall.dto.AnnouncementUpdateDto;
 import com.wct.animall.model.Announcement;
 import com.wct.animall.service.AnnouncementService;
 
-@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/v1/")
 public class AnnouncementControllerAPI {
@@ -35,6 +35,12 @@ public class AnnouncementControllerAPI {
 		return announcementService.findAll();
 	}
 
+	// NEW ADDED
+	@PostMapping("/Announcement/addAnimalAnnoucement")
+	public AnnouncementAnimalSaveDto saveAnnouncementDto(@RequestBody AnnouncementAnimalSaveDto dto) throws Exception {
+		return announcementService.saveAnnouncementAnimalDto(dto);
+	}
+
 	@GetMapping("/Announcement/{id}")
 	public AnnouncementDto findByID(@PathVariable Long id) {
 		Announcement announcement = announcementService.findById(id);
@@ -42,7 +48,7 @@ public class AnnouncementControllerAPI {
 	}
 
 	@PostMapping("/Announcement/add")
-	public AnnouncementSaveDto saveAnnouncementDto(AnnouncementSaveDto dto) throws Exception {
+	public AnnouncementSaveDto saveAnnouncementDto(@RequestBody AnnouncementSaveDto dto) throws Exception {
 		return announcementService.saveAnnouncementDto(dto);
 	}
 

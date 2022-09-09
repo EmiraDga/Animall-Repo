@@ -6,7 +6,7 @@ public class AnimalUpdateDto {
 	private int age;
 	private String color;
 	private String gender;
-	private String Breed;
+	private String breed;
 	private String image;
 	private boolean vaccinated;
 	private boolean trained;
@@ -21,7 +21,7 @@ public class AnimalUpdateDto {
 		this.age = age;
 		this.color = color;
 		this.gender = gender;
-		this.Breed = breed;
+		this.breed = breed;
 		this.image = image;
 		this.vaccinated = vaccinated;
 		this.trained = trained;
@@ -60,11 +60,11 @@ public class AnimalUpdateDto {
 	}
 
 	public String getBreed() {
-		return Breed;
+		return breed;
 	}
 
 	public void setBreed(String breed) {
-		Breed = breed;
+		breed = breed;
 	}
 
 	public String getImage() {
