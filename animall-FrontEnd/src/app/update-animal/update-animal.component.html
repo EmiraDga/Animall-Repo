@@ -19,21 +19,42 @@
   <div class="wrap">
     <form (ngSubmit)="onSubmit()">
       <div class="form-header">
-        <h2>Please fill in this form to <u style="color: red">update</u> the pet information</h2>
+        <h2>Please fill in this form to add the pet for donation </h2>
       </div>
       <div class="form-body">
         <fieldset>
 
           <legend><i class="fa fa-paw" aria-hidden="true"></i> Pet Information</legend>
           <label for="fname">Pet Name</label>
-          <input type="text" id="fname" name="fname"  *ngIf="animal" [(ngModel)]="animal.name">
+          <input type="text" id="fname" name="fname" required="" [(ngModel)]="animal.name">
 
           <label for="lname">Pet Age </label>
-          <input type="text" id="fname" name="fname" *ngIf="animal" [(ngModel)]="animal.age">
+          <input type="text" id="fname" name="fname" required="" [(ngModel)]="animal.age">
 
           <label for="lname"> Color </label>
-          <input type="text" id="lname" name="lname" *ngIf="animal" [(ngModel)]="animal.color">
+          <input type="text" id="lname" name="lname" required="" [(ngModel)]="animal.color">
 
+
+          <label for="lname"> Breed </label>
+          <input type="text" id="lname" name="lname" required="" [(ngModel)]="animal.breed">
+
+         
+          <label for="lname"> categoryId </label>
+          <input type="text" id="lname" name="lname" required="" [(ngModel)]="animal.categoryId">
+
+
+          <label for="lname"> vaccinated </label>
+          <input type="text" id="lname" name="lname" required="" [(ngModel)]="animal.vaccinated">
+          
+          <label for="lname"> trained </label>
+          <input type="text" id="lname" name="lname" required="" [(ngModel)]="animal.trained">
+
+          <label for="lname"> image </label>
+          <input type="text" id="lname" name="lname" required="" [(ngModel)]="animal.image">
+
+
+
+         
           <!-- <label for="address">Location</label>
           <input type="text" id="address" name="address" required=""  >
 

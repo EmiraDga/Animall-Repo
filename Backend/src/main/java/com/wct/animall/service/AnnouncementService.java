@@ -1,5 +1,6 @@
 package com.wct.animall.service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.wct.animall.converter.AnnouncementConverter;
+import com.wct.animall.dto.AnnouncementAnimalSaveDto;
 import com.wct.animall.dto.AnnouncementDto;
 import com.wct.animall.dto.AnnouncementSaveDto;
 import com.wct.animall.dto.AnnouncementUpdateDto;
@@ -34,7 +36,7 @@ public class AnnouncementService {
 	private UserRepository userRepository;
 
 	@Autowired
-	private AnimalRepository AnimalRepository;
+	private AnimalRepository animalRepository;
 
 	// Get all the users
 	public List<AnnouncementDto> findAll() {
@@ -59,7 +61,7 @@ public class AnnouncementService {
 		User user = userRepository.findById(dto.getUserId()).orElseThrow(() -> new Exception("User Not found"));
 		announcement.setUser(user);
 
-		Animal animal = AnimalRepository.findById(dto.getAnimalId())
+		Animal animal = animalRepository.findById(dto.getAnimalId())
 				.orElseThrow(() -> new Exception("Animal Not found"));
 		announcement.setAnimal(animal);
 
@@ -80,6 +82,19 @@ public class AnnouncementService {
 		SavedAnnouncement.setAnimal(AnnouncementToUpdate.getAnimal());
 
 		return converter.convertToDto(announcRepository.save(SavedAnnouncement));
+	}
+
+	// NEW ADDED
+	public AnnouncementAnimalSaveDto saveAnnouncementAnimalDto(AnnouncementAnimalSaveDto dto) throws Exception {
+		// modelMapper.getConfiguration().setAmbiguityIgnored(true);
+		Animal animal = modelMapper.map(dto, Animal.class);
+		animal = animalRepository.save(animal);
+
+		Announcement announcement = modelMapper.map(dto, Announcement.class);
+		announcement.setAnimal(animal);
+		announcement.setDateCreated(LocalDateTime.now());
+		return converter.convertToSaveAnimalAnnouncementDto(announcRepository.save(announcement));
+
 	}
 
 }

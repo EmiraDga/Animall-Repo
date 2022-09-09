@@ -16,4 +16,30 @@ export class AnnouncementServiceService {
     return this.httpClient.get<Announcement[]>(`${this.baseURL}`);
 
   }
+
+  createAnnouncement(announcement: Announcement): Observable<Announcement> {
+    console.log("announcement in service", announcement)
+    return this.httpClient.post<Announcement>(`${this.baseURL}` + '/add', announcement)
+      ;
+  }
+
+//ADDED
+createAnimalAnnouncement(announcement: Announcement): Observable<Announcement> {
+  console.log("announcement and animal in service", announcement)
+  return this.httpClient.post<Announcement>(`${this.baseURL}` + '/addAnimalAnnoucement', announcement)
+    ;
+}
+
+  updateAnnouncement(id: number, announcement: Announcement): Observable<Announcement> {
+    return this.httpClient.put<Announcement>(`${this.baseURL}/update/${id}`, announcement)
+  }
+ 
+  getAnnouncementById(id: number): Observable<Announcement> {
+    return this.httpClient.get<Announcement>(`${this.baseURL}/${id}`);
+  }
+
+  deleteAnnouncement(id : number) : Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL}/delete/${id}`);
+
+  }
 }

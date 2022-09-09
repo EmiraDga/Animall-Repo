@@ -11,7 +11,23 @@ export class Announcement {
 
 	public description?: String;
 
-	public animal?: Animal;
+	// public animalId?: number;
 
-	public user?: UserDto;
+	// public userId?: number;
+
+	// public animal!: Animal;
+
+	 public user!: UserDto;
+    public animalName?: String;
+	public animalAge?: number;
+	 animalColor!:String;
+	 animalGender!:String;
+	 animalBreed!:String;
+	 animalImage!:String;
+	 animalVaccinated!:boolean;
+	 animalTrained!:boolean;
+     animalCategoryName!:String;
+	 animalId!:number;
+	
+
 }

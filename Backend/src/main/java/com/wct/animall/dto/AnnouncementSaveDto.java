@@ -12,7 +12,7 @@ public class AnnouncementSaveDto {
 
 	private String location;
 
-	private Integer AnimalId;
+	private Integer animalId;
 
 	@JsonFormat(pattern = "yyyy-MM-dd", shape = Shape.STRING)
 	private String dateCreated;
@@ -24,14 +24,14 @@ public class AnnouncementSaveDto {
 	}
 
 	public AnnouncementSaveDto(StateType state, Long userId, String location, String dateCreated, String description,
-			Integer AnimalId) {
+			Integer animalId) {
 		super();
 		this.state = state;
 		this.userId = userId;
 		this.location = location;
 		this.dateCreated = dateCreated;
 		this.description = description;
-		this.AnimalId = AnimalId;
+		this.animalId = animalId;
 	}
 
 	public String getLocation() {
@@ -75,11 +75,11 @@ public class AnnouncementSaveDto {
 	}
 
 	public Integer getAnimalId() {
-		return AnimalId;
+		return animalId;
 	}
 
 	public void setAnimalId(Integer animalId) {
-		AnimalId = animalId;
+		animalId = animalId;
 	}
 
 }

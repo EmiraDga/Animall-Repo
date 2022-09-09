@@ -19,6 +19,12 @@ import { AddAnnouncementComponent } from './add-announcement/add-announcement.co
 import { AnimalCreateComponent } from './animal-create/animal-create.component';
 import { AnnouncementDetailComponent } from './announcement-detail/announcement-detail.component';
 import { UpdateAnimalComponent } from './update-animal/update-animal.component'; 
+import {MatSelectModule} from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { DonationComponent } from './donation/donation.component'; 
+
+//import { MatOptionModule,MatSelectModule, MatSliderModule} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,13 +42,18 @@ import { UpdateAnimalComponent } from './update-animal/update-animal.component';
     AddAnnouncementComponent,
     AnimalCreateComponent,
     AnnouncementDetailComponent,
-    UpdateAnimalComponent
+    UpdateAnimalComponent,
+    DonationComponent
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+     MatSelectModule,
+     BrowserAnimationsModule,
+     MatFormFieldModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

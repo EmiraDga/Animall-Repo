@@ -17,7 +17,7 @@ public class Animal {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	private String color, gender, Breed, name;
+	private String color, gender, breed, name;
 	private String image;
 	private int age;
 
@@ -40,7 +40,7 @@ public class Animal {
 		this.color = color;
 		this.gender = gender;
 		this.image = image;
-		this.Breed = breed;
+		this.breed = breed;
 		this.name = name;
 		this.age = age;
 		this.weight = weight;
@@ -57,7 +57,7 @@ public class Animal {
 		this.color = color;
 		this.gender = gender;
 		this.image = image;
-		this.Breed = breed;
+		this.breed = breed;
 		this.name = name;
 		this.age = age;
 		this.weight = weight;
@@ -101,11 +101,11 @@ public class Animal {
 	}
 
 	public String getBreed() {
-		return Breed;
+		return breed;
 	}
 
 	public void setBreed(String breed) {
-		Breed = breed;
+		breed = breed;
 	}
 
 	public String getName() {
