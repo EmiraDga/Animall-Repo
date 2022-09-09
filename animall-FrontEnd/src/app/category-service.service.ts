@@ -15,4 +15,8 @@ export class CategoryServiceService {
     return this.httpClient.get<Category[]>(`${this.baseURL}`);
 
   }
+
+  getCategoryById(id: number): Observable<Category> {
+    return this.httpClient.get<Category>(`${this.baseURL}/${id}`);
+  }
 }

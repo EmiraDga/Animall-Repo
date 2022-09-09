@@ -38,6 +38,7 @@ this.GetCategories();
   SaveAnnouncement() {
     this.announcementService.createAnimalAnnouncement(this.announcement).subscribe(data => {
       console.log(this.announcement);
+      this.goToAnnouncementList();
     },
       error => console.log(error));
   }
@@ -49,7 +50,7 @@ this.GetCategories();
   }
 
 
-  goToUserList() {
+  goToAnnouncementList() {
     this.router.navigate(['/announcement']);
 
   }

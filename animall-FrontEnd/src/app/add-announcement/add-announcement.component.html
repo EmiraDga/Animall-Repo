@@ -35,14 +35,7 @@
               loving forever home for your pet. All you need to do is to set up your pet's profile in less than 10 mins.
               Once complete, your pet's profile will be posted on AniMall and be seen by millions of visitors each
               month!</p>
-<!-- 
-            <select [(ngModel)]="categories">
-              <option [ngValue]="categories">Select Categroy </option>
-              <option *ngFor="let c of categories" [ngValue]="c.nameCategory">
-                {{ c.nameCategory }}
-                <br>
-              </option>
-            </select> -->
+
             <legend style="font-family: Nunito, sans-serif!important; color: #181818; "><i class="fa fa-user"></i> About
               You </legend>
             <div class="row">
@@ -112,14 +105,14 @@
                   <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Pet's name"
                     [(ngModel)]="announcement.animalGender"></textarea>
                 </div>
-
+                <!-- 
                 <div class="col-md-12 form-group mb-3">
                   <label for="message" class="col-form-label"
                     style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">Pet's
                     CategoryName*</label>
                   <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Pet's name"
                     [(ngModel)]="announcement.animalCategoryName"></textarea>
-                </div>
+                </div> -->
 
                 <div class="col-md-12 form-group mb-3">
                   <label for="message" class="col-form-label"
@@ -148,6 +141,8 @@
                   <textarea class="form-control" name="message" id="message" cols="30" rows="4"
                     placeholder="Pet's color" [(ngModel)]="announcement.animalColor"></textarea>
                 </div>
+
+
 
                 <div class="col-md-12 form-group mb-3">
                   <label for="message" class="col-form-label"
@@ -210,6 +205,18 @@
                     placeholder="Write your description" [(ngModel)]="announcement.description"></textarea>
                 </div>
               </div>
+
+              <div class="col-md-12 form-group mb-3">
+
+              
+              </div>
+              <select [(ngModel)]="categories">
+                <option [ngValue]="undefined">Select Categroy </option>
+                <option *ngFor="let c of categories" [ngValue]="c.nameCategory">
+                  {{ c.nameCategory }}
+                  <br>
+                </option>
+              </select>
 
               <p></p>
               <div class="form-check">
