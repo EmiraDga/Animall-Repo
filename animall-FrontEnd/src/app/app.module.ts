@@ -22,7 +22,8 @@ import { UpdateAnimalComponent } from './update-animal/update-animal.component';
 import {MatSelectModule} from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { DonationComponent } from './donation/donation.component'; 
+import { DonationComponent } from './donation/donation.component';
+import { AboutComponent } from './about/about.component'; 
 
 //import { MatOptionModule,MatSelectModule, MatSliderModule} from '@angular/material';
 @NgModule({
@@ -43,7 +44,8 @@ import { DonationComponent } from './donation/donation.component';
     AnimalCreateComponent,
     AnnouncementDetailComponent,
     UpdateAnimalComponent,
-    DonationComponent
+    DonationComponent,
+    AboutComponent
     ],
   imports: [
     BrowserModule,

@@ -93,51 +93,39 @@
               <div class="row">
                 <div class="col-md-12 form-group mb-3">
                   <label for="message" class="col-form-label"
-                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">Pet's
-                    name*</label>
+                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">
+                    Name*</label>
                   <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Pet's name"
                     [(ngModel)]="announcement.animalName"></textarea>
                 </div>
                 <div class="col-md-12 form-group mb-3">
                   <label for="message" class="col-form-label"
-                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">Pet's
+                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">
                     Gender*</label>
                   <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Pet's name"
                     [(ngModel)]="announcement.animalGender"></textarea>
                 </div>
-                <!-- 
-                <div class="col-md-12 form-group mb-3">
-                  <label for="message" class="col-form-label"
-                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">Pet's
-                    CategoryName*</label>
-                  <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Pet's name"
-                    [(ngModel)]="announcement.animalCategoryName"></textarea>
-                </div> -->
 
                 <div class="col-md-12 form-group mb-3">
                   <label for="message" class="col-form-label"
-                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">Pet's
+                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">
                     Image*</label>
                   <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Pet's name"
                     [(ngModel)]="announcement.animalImage "></textarea>
                 </div>
 
-
-
-
-
                 <div class="col-md-12 form-group mb-3">
                   <label for="message" class="col-form-label"
-                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">Pet's
-                    age*</label>
+                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">
+                    Age*</label>
                   <textarea class="form-control" name="message" id="message" cols="30" rows="4" placeholder="Pet's age"
                     [(ngModel)]="announcement.animalAge"></textarea>
                 </div>
 
                 <div class="col-md-12 form-group mb-3">
                   <label for="message" class="col-form-label"
-                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">Pet's
-                    color*</label>
+                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">
+                    Color*</label>
                   <textarea class="form-control" name="message" id="message" cols="30" rows="4"
                     placeholder="Pet's color" [(ngModel)]="announcement.animalColor"></textarea>
                 </div>
@@ -146,8 +134,8 @@
 
                 <div class="col-md-12 form-group mb-3">
                   <label for="message" class="col-form-label"
-                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">Pet's
-                    breed*</label>
+                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">
+                    Breed*</label>
                   <textarea class="form-control" name="message" id="message" cols="30" rows="4"
                     placeholder="Pet's breed" [(ngModel)]="announcement.animalBreed"></textarea>
                 </div>
@@ -158,43 +146,12 @@
               <div class="row">
                 <div class="col-md-12 form-group mb-3">
                   <label for="message" class="col-form-label"
-                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">Pet's Location
-                    *</label>
+                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">
+                    Location*</label>
                   <textarea class="form-control" name="message" id="message" cols="30" rows="4"
                     placeholder="Pet's Location" [(ngModel)]="announcement.location"></textarea>
                 </div>
               </div>
-
-              <!-- <div class="row">
-                <div class="col-md-12 form-group mb-3">
-                  <label for="message" class="col-form-label"
-                    style="font-family: Nunito, sans-serif!important; color: #181818; font-size: larger;">Date Created
-                    *</label>
-                  <textarea class="form-control" name="message" id="message" cols="30" rows="4"
-                    placeholder="Date Created of announcement" [(ngModel)]="announcement.dateCreated"></textarea>
-                </div>
-              </div> -->
-
-
-
-
-
-
-              <!-- <mat-form-field>
-                <mat-select placeholder="State">
-                  <mat-option>None</mat-option>
-                  <mat-option *ngFor="let a of animal" [value]="categoryId">{{animal.categoryId}}</mat-option>
-                </mat-select>
-              </mat-form-field>
-               -->
-
-              <!-- <div class="row">
-                <div class="col-md-12 form-group mb-3">
-                  <label for="message" class="col-form-label">Pet's Image *</label>
-                  <input class="form-control" type="file" id="formFileMultiple" multiple [(ngModel)]="announcement.animal!.image" />
-                </div>
-              </div> -->
-
 
               <div class="row">
                 <div class="col-md-12 form-group mb-3">
@@ -208,10 +165,10 @@
 
               <div class="col-md-12 form-group mb-3">
 
-              
+
               </div>
               <select [(ngModel)]="categories">
-                <option [ngValue]="undefined">Select Categroy </option>
+                <option [ngValue]="undefined">Select Pet Categroy </option>
                 <option *ngFor="let c of categories" [ngValue]="c.nameCategory">
                   {{ c.nameCategory }}
                   <br>

@@ -11,6 +11,7 @@ import{AnnouncementComponent} from './announcement/announcement.component';
 import { AnnouncementDetailComponent } from './announcement-detail/announcement-detail.component';
 import { AddAnnouncementComponent } from './add-announcement/add-announcement.component';
 import { DonationComponent } from './donation/donation.component';
+import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   {path: '' , component:FullComponent},
   {path: 'animals' , component:AnimalListBackComponent },
@@ -24,7 +25,7 @@ const routes: Routes = [
    {path: 'add-announcement' , component:AddAnnouncementComponent },
    {path: 'create-animal' , component:AnimalCreateComponent},
    {path: 'donation' , component: DonationComponent},
-
+   {path: 'about' , component: AboutComponent},
    {path: '', redirectTo:'users' , pathMatch: 'full'}
 
 ];
