@@ -1,3 +1,5 @@
+import { Announcement } from "./announcement";
+
 export class Animal {
 
     public id!: number;
@@ -11,6 +13,8 @@ export class Animal {
     public trained?: boolean;
     public categoryId? :number;
   saveAnimal: any;
+//public announcement!: Announcement;
+
 
 
 }

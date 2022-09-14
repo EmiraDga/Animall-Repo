@@ -18,8 +18,6 @@ import com.wct.animall.dto.UserSaveDto;
 import com.wct.animall.model.User;
 import com.wct.animall.service.UserService;
 
-//@CrossOrigin(origins = "http://localhost:4200")
-//@CrossOrigin("*")
 @RestController
 @RequestMapping("/api/v1/")
 public class UserControllerAPI {

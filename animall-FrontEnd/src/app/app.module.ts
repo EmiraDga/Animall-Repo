@@ -24,6 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { DonationComponent } from './donation/donation.component';
 import { AboutComponent } from './about/about.component'; 
+import { Announcement } from './announcement';
+import { ContactComponent } from './contact/contact.component';
 
 //import { MatOptionModule,MatSelectModule, MatSliderModule} from '@angular/material';
 @NgModule({
@@ -45,7 +47,8 @@ import { AboutComponent } from './about/about.component';
     AnnouncementDetailComponent,
     UpdateAnimalComponent,
     DonationComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
     ],
   imports: [
     BrowserModule,
@@ -57,7 +60,7 @@ import { AboutComponent } from './about/about.component';
      MatFormFieldModule
 
   ],
-  providers: [],
+  providers: [Announcement],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

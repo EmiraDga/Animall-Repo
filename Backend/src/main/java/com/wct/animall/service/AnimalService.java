@@ -49,7 +49,6 @@ public class AnimalService {
 		animalRepo.deleteById(id);
 	}
 
-	// UN PROBLEME AU NIVEAU ANIMAL ET CATEGORY
 	public AnimalSaveDto saveAnimalDto(AnimalSaveDto dto) throws Exception {
 		Animal animal = modelMapper.map(dto, Animal.class);
 		animal.setId(null);
@@ -60,7 +59,6 @@ public class AnimalService {
 
 	}
 
-//UN PROBLEME AU NIVEAU ANIMAL ET CATEGORY
 	public AnimalDto updateAnimalDto(int id, AnimalUpdateDto dto) {
 		Animal SavedAnimal = animalRepo.findById(id).get();
 		Animal AnimalToUpdate = converter.convertToUpdateEntity(dto);

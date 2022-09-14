@@ -10,13 +10,7 @@ export class Announcement {
 	public dateCreated?: String;
 
 	public description?: String;
-
-	// public animalId?: number;
-
-	// public userId?: number;
-
-	// public animal!: Animal;
-
+	
 	 public user!: UserDto;
     public animalName?: String;
 	public animalAge?: number;
@@ -28,6 +22,7 @@ export class Announcement {
 	 animalTrained!:boolean;
      animalCategoryName!:String;
 	 animalId!:number;
+
 	
 
 }

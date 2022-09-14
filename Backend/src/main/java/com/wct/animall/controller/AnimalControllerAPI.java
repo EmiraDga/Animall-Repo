@@ -62,7 +62,7 @@ public class AnimalControllerAPI {
 	}
 
 	@RequestMapping(value = "/animals/delete/{id}", method = RequestMethod.DELETE)
-	public void deleteAnimal(int id) {
+	public void deleteAnimal(@PathVariable int id) {
 		animalService.RemoveAnimal(id);
 	}
 
